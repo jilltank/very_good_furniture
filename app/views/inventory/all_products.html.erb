@@ -1,0 +1,19 @@
+<h1>Welcome to the Very Good Furniture Store</h1>
+	<p>
+		Come see us for your furniture needs. Or do not. I am not a beggar.
+	</p>
+	<small>End of commercial.</small>
+	<br>
+
+<h2>All Products</h2>
+
+
+<ul>
+	<% @all.each do |p| %>
+		<li>
+		<%= link_to p.name, one_product_path(name: p.name) %>
+		<%= "$#{p.price}0" %>
+		<%= link_to p.category, by_category_path(category: p.category) %>
+		</li>
+	<% end %>
+</ul>

@@ -1,0 +1,6 @@
+<h1><%= params[:name] %></h1>
+
+<% @one.each do |n| %>
+	<%= "Price: $#{n.price}0, Category: #{n.category}" %>
+	<% end %>
+

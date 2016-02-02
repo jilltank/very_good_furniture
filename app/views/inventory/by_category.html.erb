@@ -1,0 +1,11 @@
+<h1>Products in <%= params[:category] %></h1>
+
+<p>"I made my first chair when I was five, but the quality was wanting, so when I turned nine, I used my factory wages to purchase some beautiful local walnut."</p>
+
+<ul>
+	<% @categories.each do |c| %>
+		<li>
+		<%= "#{c.name}, $#{c.price}0" %>
+		</li>
+	<% end %>
+</ul>

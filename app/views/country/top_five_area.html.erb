@@ -1,0 +1,16 @@
+<h1>Our Biggest States By Area</h1>
+
+
+<ol>
+		<% @states.each do |s| %>
+			<li>
+			<b><%= s.name %></b>
+				<ul>
+					<li>Capital: <%= s.capitol %></li>
+					<li>Population: <%= number_with_delimiter s.population %></li>
+					<li>Area: <%= number_with_delimiter s.area %> sq miles</li>
+				</ul>
+		 	</li>
+		 	<br>
+	<% end %>
+</ol>
