@@ -1,6 +1,9 @@
 <h1><%= params[:name] %></h1>
 
+<p>
 <% @one.each do |n| %>
 	<%= "Price: $#{n.price}0, Category: #{n.category}" %>
 	<% end %>
-
+</p>
+<br>
+<%= link_to "Back To All Products", root_path %>
